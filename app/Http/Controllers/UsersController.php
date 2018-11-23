@@ -33,7 +33,8 @@ class UsersController extends Controller
 
     public function show(User $user)
     {
-    	return view('users.show', compact('user'));
+        $feed_items = $user->feed()->paginate(10);
+    	return view('users.show', compact('user', 'feed_items'));
     }
 
     public function store(Request $request)

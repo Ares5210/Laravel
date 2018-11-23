@@ -11,6 +11,9 @@
         </section>
       </div>
     </div>
+    <div class="col-md-12">
+	    @include('shared._feed')
+    </div>
   </div>
 </div>
 @stop
